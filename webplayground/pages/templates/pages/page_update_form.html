@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Editar página{% endblock %}
+{% block content %}
+{% include 'pages/includes/pages_menu.html'%}
+<main role="main">
+  <div class="container">
+    <div class="row mt-3 mb-5 text-center">
+      <div class="col-md-9 mx-auto">
+        <div>
+        {% if 'ok' in request.GET %}
+          <p style="background-color:aqua;width: 600px; color: green; font-size: 16px; font-weight: bold;">La página fue actualizada correctamente!
+          <a style="font-weight: bold;" href="{% url 'pages:page' page.id page.title|slugify %}"> Haga click aquí para ver la página</a></p>
+        {% endif %}
+            <form action="" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Actualizar página <span class="fa fa-edit"> ></span></button>
+                <a href="javascript:history.back()" class="btn btn-success"><span class="fa fa-undo"></span>Cancelar</a>
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

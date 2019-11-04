@@ -1,0 +1,27 @@
+
+{% extends "core/base.html" %}
+{% load static %}
+{% block title %}Registración{% endblock %}
+{% block content %}
+<style>label{display: none;}.helptext{display: none;}</style>
+
+
+<main role="main">
+    <form method="post" action=""> {% csrf_token %}
+	    <div class="container">
+            <h3 class="mb-4" style="text-align: center;">Modificación de Email</h3>
+
+        {{form.as_p}}
+
+        <div class="row mt-3">
+                <div class="col-md-9 mx-auto mb-2">
+                    <p><input type="submit" class="btn btn-primary btn-block" value="Actualizar"></p>
+                    <p style="text-align: center;"> <a href="{% url 'profile' %}" class="btn btn-danger btn-block"><span class="fa fa-undo"></span>Cancelar</a></p>
+                </div>
+            </div>
+</form>
+	
+</main>
+
+
+{% endblock %}
