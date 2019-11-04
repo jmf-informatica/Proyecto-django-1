@@ -40,7 +40,7 @@ class ProfileUpdate(UpdateView):
 
     def get_object(self):
         # Recupera el objeto que se va a editar
-        profile,create = Profile.objects.get_or_create(user=self.request.user) # get_or_create: busca el perfil y si no existe lo crea.
+        profile,create = Profile.objects.get_or_create(user=self.request.user) 
         return profile
 
 
