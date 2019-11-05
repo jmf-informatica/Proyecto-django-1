@@ -1,4 +1,4 @@
-# Proyecto-django-1
+# Funcionalidades:
 * Sitio con registro, autenticación de usuarios y permisos.
 * Funcionalidad de restaurar la contraseña a través de email.
 * Funcionalidad de editar los campos email y contraseña.
