@@ -12,12 +12,15 @@
           <div>
             <p>{{page.content|striptags|safe|truncatechars:"200"}}</p>
             <p><a href="{% url 'pages:page' page.id page.title|slugify %}">Leer más</a>
-             
-              {% if request.user.is_staff %}
+              {% comment %}
+                {% if request.user.is_staff %} Para usuarios pertenecientes al staff (acceso al admin)
+              {% endcomment %}
+              {% if perms.pages.change_page %} <!-- Si tiene permiso de editar, muestra el link -->
                 | <a href="{% url 'pages:update' page.id %}">Editar</a>
+              {% endif %}
+              {% if perms.pages.delete_page %} <!-- Si tiene permiso de eliminar, muestra el link -->
                 | <a href="{% url 'pages:delete' page.id %}">Borrar</a>
               {% endif %}
-              
             </p>
           </div>
         </div>
