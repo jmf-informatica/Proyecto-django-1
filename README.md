@@ -5,3 +5,12 @@
 * Sistema de perfiles de usuarios con avatar
 * Creador de páginas tipo blog.
 
+
+Credenciales de usuario con privilegios:
+*uss: Usuario1
+*pass: Prueba.123
+
+Credenciales de usuario sin privilegios:
+
+*uss: Usuario2
+*pass: Prueba.123
