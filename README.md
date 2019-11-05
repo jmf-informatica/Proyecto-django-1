@@ -6,11 +6,11 @@
 * Creador de páginas tipo blog.
 
 
-Credenciales de usuario con privilegios:
-*uss: Usuario1
-*pass: Prueba.123
+# Credenciales de usuario con privilegios:
+* uss: Usuario1
+* pass: Prueba.123
 
-Credenciales de usuario sin privilegios:
+# Credenciales de usuario sin privilegios:
 
-*uss: Usuario2
-*pass: Prueba.123
+* uss: Usuario2
+* pass: Prueba.123
