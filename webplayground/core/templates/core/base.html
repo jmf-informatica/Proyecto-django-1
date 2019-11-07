@@ -9,25 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
     <!-- Estilos -->
-    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'core/vendor/fontawesome-free/css/all.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'core/css/main.css' %}" rel="stylesheet">
-    <link href="{% static 'registration/css/registration.css' %}" rel="stylesheet">
+    <link href="{% static 'core/css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'registration/css/registration.css' %}" rel="stylesheet" type="text/css">
   </head>
   <body>
     <body>
       <!-- Navegación -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand" href="{% url 'home' %}">Playground</a>
+          <a class="navbar-brand" href="{% url 'core:home' %}">JMF</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ned" aria-controls="ned" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="ned">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                <a class="nav-link" href="{% url 'core:home' %}">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'pages:pages' %}">Páginas</a>

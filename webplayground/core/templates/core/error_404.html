@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!--Bloque para modificar el titulo del sitio -->
+{% block title %}
+Pagina no encontrada
+{% endblock title %}
+
+<!--Bloque para modificar contenido-->
+
+{% block content %}
+<div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="home.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Página no encontrada</font></font></a>
+          </li>
+          <li class="breadcrumb-item active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">error 404</font></font></li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1 class="display-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit; font-size:48px;">No fue posible encontrar la pagina buscada!</font></font></h1>
+        <p class="lead"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Verifica estar accediendo a la pagina correcta. </font><font style="vertical-align: inherit;">Puede
+           </font></font><a href="javascript:history.back()"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">volver</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+          a la página anterior o
+           </font></font><a href="{% url 'core:home' %}"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">regresar a casa</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></p>
+
+      </div>
+{%endblock content%}

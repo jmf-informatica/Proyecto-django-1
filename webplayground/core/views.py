@@ -10,3 +10,6 @@ class HomePageView(TemplateView):
 
 class SamplePageView(TemplateView):
     template_name="core/sample.html"
+
+def mi_error_404(request, exception):
+    return render(request,'Aplicacion/error_404.html')
